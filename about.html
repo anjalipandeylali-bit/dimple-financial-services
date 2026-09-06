@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dimple Financial Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header>
+        <div class="logo">Dimple Financial Office</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Page Hero Banner -->
+    <section class="hero" style="padding: 80px 20px;">
+        <h1>About Our Office</h1>
+        <p>Your Trusted Partner for Financial, Property, and Legal Solutions</p>
+    </section>
+
+    <!-- Detailed About Section -->
+    <section class="about-preview" style="padding: 60px 20px;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+            <h2 style="text-align: center; margin-bottom: 25px;">Welcome to Dimple Financial Office</h2>
+            <p style="margin-bottom: 20px; font-size: 16px; color: #555;">
+                Dimple Financial Services is a trusted multi-service hub where we provide all financial assistance, property management, and legal documentation services to our clients under one roof. Our goal is to make every client's work simple and transparent.
+            </p>
+            <p style="margin-bottom: 40px; font-size: 16px; color: #555;">
+                Years of experience and dedicated service delivery have made us a reliable name in Mumbai. Whether you are looking for funding options like home and personal loans, managing property deals (rent, sell, purchase), or completing essential documentation like agreements, Gumasta licenses, and notary work—we handle everything with absolute professionalism.
+            </p>
+
+            <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
+                <div style="flex: 1; min-width: 280px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #0b2545; margin-bottom: 15px; font-size: 22px; border-bottom: 2px solid #ee6c4d; padding-bottom: 8px;">Our Vision</h3>
+                    <p style="color: #666; font-size: 15px;">
+                        To be the most trusted and reliable financial and documentation partner for our clients, simplifying every step of property acquisition, loans, and legal compliance with complete transparency and efficiency.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 280px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #0b2545; margin-bottom: 15px; font-size: 22px; border-bottom: 2px solid #ee6c4d; padding-bottom: 8px;">Our Mission</h3>
+                    <p style="color: #666; font-size: 15px;">
+                        To empower individuals and businesses by providing prompt financial assistance, hassle-free property solutions, and accurate legal documentation under one roof, ensuring absolute peace of mind for every client.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Info -->
+    <footer>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Office Address:</strong>  Shop No. 11,Breeze Bldg,Decent Homes,Palghar East- 401404 ,Mumbai, Maharashtra</p>
+                <p><strong>Email:</strong> dimplefinancialservices@gmail.com</p>
+                
+                <div class="contact-numbers">
+                    <h3>Call Us Directly</h3>
+                    <div class="number-grid">
+                        <div class="num-card"><a href="tel:+919356559152">+91 9356559152</a></div>
+                        <div class="num-card"><a href="tel:+918528478947">+91 8528478947</a></div>
+                        <div class="num-card"><a href="tel:+917709703939">+91 7709703939</a></div>
+                        <div class="num-card"><a href="tel:+917559345239">+91 7559345239</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                 <div class="contact-form">
+    <h3>Send an Inquiry</h3>
+    <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="custName" placeholder="Your Name" required>
+        <input type="tel" id="custPhone" placeholder="Phone Number" required>
+        <select id="custRequirement" required>
+            <option value="">What are you looking for? (Select Property)</option>
+            <option value="1 RK">1 RK</option>
+            <option value="1 BHK">1 BHK</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+            <option value="Row House">Row House</option>
+            <option value="Loan / Other Service">Loan / Other Service</option>
+        </select>
+       
+        <button type="submit" class="form-btn">Submit Inquiry</button>
+    </form>
+</div>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault(); // Page refresh hone se rokne ke liye
+
+    let name = document.getElementById('custName').value;
+    let phone = document.getElementById('custPhone').value;
+    let requirement = document.getElementById('custRequirement').value;
+    
+
+    let ownerPhoneNumber = "918528478947"; // Yahan apna WhatsApp number daal dein
+
+    // %0A ke baad space ya clear formatting di gayi hai taaki text ek line mein na chipke
+    let text = "*New Inquiry from Website*%0A%0A" +
+               "*Name:* " + name + "%0A" +
+               "*Phone:* " + phone + "%0A" +
+               "*Looking For:* " + requirement + "%0A";
+
+    let url = `https://wa.me/${ownerPhoneNumber}?text=` + text;
+
+    window.open(url, '_blank');
+}
+</script>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dimple Financial Office. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
